@@ -5,6 +5,10 @@
 
 menuDict = {1: "Add employees", 2: "Update employees", 3: "Delete employees"}
 
+def choice():
+    admin_choice = input("Select an operation to perform: ")
+    return admin_choice
+
 print("The following operations may be executed: ")
 print(f"1: {menuDict[1]}")
 print(f"2: {menuDict[2]}")
@@ -23,6 +27,7 @@ while admin_choice != "exit":
             addEmp(num)
         except:
             print("Operation not found.")
+            admin_choice = input("Select an operation to perform: ")
 
     # Update employees
     elif admin_choice == '2':
@@ -32,6 +37,7 @@ while admin_choice != "exit":
             updateEmp(num)
         except:
             print("Operation not found.")
+            admin_choice = input("Select an operation to perform: ")
 
     # Delete employees
     elif admin_choice == '3':
@@ -41,11 +47,9 @@ while admin_choice != "exit":
             deleteEmp(num)
         except:
             print("Operation not found.")
+            admin_choice = input("Select an operation to perform: ")
 
     # Exit the program
     elif admin_choice == 'exit':
         break
 
-    # Exit the program
-    else:
-        admin_choice = input("Select an operation to perform: ")
