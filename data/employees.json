@@ -5,7 +5,7 @@
     "last_name": "Brual",
     "emp_date": "02/01/2022",
     "salary": 50000,
-    "department": "IT"
+    "department": 6
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "last_name": "Fabia",
     "emp_date": "02/01/2022",
     "salary": 50000,
-    "department": "IT"
+    "department": 6
   },
   {
     "id": 3,
@@ -21,6 +21,6 @@
     "last_name": "Khatter",
     "emp_date": "02/01/2022",
     "salary": 50000,
-    "department": "IT"
+    "department": 6
   }
 ]
