@@ -23,26 +23,27 @@
   {
     "id": 4,
     "name": "Marketing",
-    "budget": 1000000,
-    "phone_number": "555-1234",
+    "budget": 6000000,
+    "phone_number": "553-7564"
     "employees": []
   },
   {
     "id": 5,
     "name": "Inventory",
     "budget": 1000000,
-    "phone_number": "555-1234",
+
+    "phone_number": "559-1234"
     "employees": []
   },
   {
     "id": 6,
     "name": "Technology",
-    "budget": 1000000,
-    "phone_number": "555-1234",
+    "budget": 1200000,
+    "phone_number": "550-8899"
     "employees": [
       1,
       2,
       3
-    ]
+    ]    
   }
 ]
