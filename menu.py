@@ -2,3 +2,40 @@
 
 # must have the option to create, update, and delete employees
 # ---> will pass an employee number to each
+
+menuDict = {1: "Add employees", 2: "Update employees", 3: "Delete employees"}
+
+print("The following operations may be executed: ")
+print(f"1: {menuDict[1]")
+print(f"2: {menuDict[2]")
+print(f"3: {menuDict[3]")
+print("exit")
+
+admin_choice = input("Select an operation to perform: ")
+
+    if admin_choice == '1':
+        try:
+            # needs a link
+            from link import *
+            addEmp(num)
+        except:
+            print("Operation not found.")
+
+    elif admin_choice == '2':
+        try:
+            # needs a link
+            from link import * 
+            updateEmp(num)
+        except:
+            print("Operation not found.")
+
+    elif admin_choice == '3':
+        try:
+            # needs a link
+            from link import * 
+            deleteEmp(num)
+        except:
+            print("Operation not found.")
+
+    elif admin_choice == 'exit':
+        break
