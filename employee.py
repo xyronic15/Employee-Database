@@ -6,7 +6,7 @@ class Employee:
         self.last_name = last_name, # str
         self.emp_date = emp_date, # datetime obj
         self.salary = salary, # int
-        self.dept = dept # str
+        self.dept = dept # int
 
     def __add__():
         # adds employee, assigns unique id num

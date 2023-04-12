@@ -3,42 +3,47 @@
     "id": 1,
     "name": "Human Resources",
     "budget": 1000000,
-    "phone_number": "555-1234"
+    "phone_number": "555-1234",
+    "employees": []
   },
   {
     "id": 2,
     "name": "Finances",
-    "budget": 8000000,
-    "phone_number": "567-8901"
+    "budget": 1000000,
+    "phone_number": "555-1234",
+    "employees": []
   },
   {
     "id": 3,
     "name": "Sales",
-    "budget": 9000000,
-    "phone_number": "545-4557"
+    "budget": 1000000,
+    "phone_number": "555-1234",
+    "employees": []
   },
   {
     "id": 4,
     "name": "Marketing",
     "budget": 6000000,
     "phone_number": "553-7564"
+    "employees": []
   },
   {
     "id": 5,
     "name": "Inventory",
     "budget": 1000000,
+
     "phone_number": "559-1234"
+    "employees": []
   },
   {
     "id": 6,
     "name": "Technology",
     "budget": 1200000,
     "phone_number": "550-8899"
-  },
-  {
-    "id": 7,
-    "name": "General Management",
-    "budget": 1500000,
-    "phone_number": "550-8899"
+    "employees": [
+      1,
+      2,
+      3
+    ]    
   }
 ]

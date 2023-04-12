@@ -1,13 +1,14 @@
 class Department:
-    def __init__(self, name, budget, phone_number):
+    def __init__(self, id, name, budget, phone_number, employees):
+        self.id = id
         self.name = name
         self.budget = budget
         self.phone_number = phone_number
-        self.employees = []
+        self.employees = employees
     
     def add_employee(self, employee):
-        self.employees.append(employee)
-        employee.department = self
+        self.employees.append(employee.emp_id)
+        employee.department = self.id
     
     def remove_employee(self, emp_id):
         for employee in self.employees:
