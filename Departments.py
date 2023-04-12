@@ -17,19 +17,13 @@ class Department:
                 return True
         return False
     
-    def update_employee(self, emp_id, first_name=None, last_name=None, date_of_employment=None, salary=None):
-        for employee in self.employees:
-            if employee.emp_id == emp_id:
-                if first_name is not None:
-                    employee.first_name = first_name
-                if last_name is not None:
-                    employee.last_name = last_name
-                if date_of_employment is not None:
-                    employee.date_of_employment = date_of_employment
-                if salary is not None:
-                    employee.salary = salary
-                return True
-        return False
+    def update_department(self, name=None, budget=None, phone_number=None):
+        if name is not None:
+            self.name = name
+        if budget is not None:
+            self.budget = budget
+        if phone_number is not None:
+            self.phone_number = phone_number
     
     def display_department(self):
         print("Department:", self.name)
