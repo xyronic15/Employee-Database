@@ -6,9 +6,9 @@
 menuDict = {1: "Add employees", 2: "Update employees", 3: "Delete employees"}
 
 print("The following operations may be executed: ")
-print(f"1: {menuDict[1]")
-print(f"2: {menuDict[2]")
-print(f"3: {menuDict[3]")
+print(f"1: {menuDict[1]}")
+print(f"2: {menuDict[2]}")
+print(f"3: {menuDict[3]}")
 print("exit")
 
 admin_choice = input("Select an operation to perform: ")
