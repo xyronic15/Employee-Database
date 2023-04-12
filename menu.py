@@ -5,16 +5,16 @@
 
 menuDict = {1: "Add employees", 2: "Update employees", 3: "Delete employees"}
 
-def choice():
-    admin_choice = input("Select an operation to perform: ")
-    return admin_choice
+# Display the print options
 
-print("The following operations may be executed: ")
-print(f"1: {menuDict[1]}")
-print(f"2: {menuDict[2]}")
-print(f"3: {menuDict[3]}")
-print("exit")
+def menuOptions(): 
+    print("The following operations may be executed: ")
+    print(f"1: {menuDict[1]}")
+    print(f"2: {menuDict[2]}")
+    print(f"3: {menuDict[3]}")
+    print("exit")
 
+menuOptions()
 admin_choice = input("Select an operation to perform: ")
 
 while admin_choice != "exit":
@@ -22,31 +22,37 @@ while admin_choice != "exit":
     # Add employees
     if admin_choice == '1':
         try:
-            # needs a link
+            ######### UPDATE ME #########
+            # I need a link :D
             from link import *
             addEmp(num)
         except:
-            print("Operation not found.")
+            print("Operation not found.", end="\n\n")
+            menuOptions()
             admin_choice = input("Select an operation to perform: ")
 
     # Update employees
     elif admin_choice == '2':
         try:
-            # needs a link
+            ######### UPDATE ME #########
+            # I need a link :D
             from link import * 
             updateEmp(num)
         except:
-            print("Operation not found.")
+            print("Operation not found.", end="\n\n")
+            menuOptions()
             admin_choice = input("Select an operation to perform: ")
 
     # Delete employees
     elif admin_choice == '3':
         try:
-            # needs a link
+            ######### UPDATE ME #########
+            # I need a link :D
             from link import * 
             deleteEmp(num)
         except:
-            print("Operation not found.")
+            print("Operation not found.", end="\n\n")
+            menuOptions()
             admin_choice = input("Select an operation to perform: ")
 
     # Exit the program
