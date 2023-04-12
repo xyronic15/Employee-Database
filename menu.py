@@ -31,6 +31,7 @@ while admin_choice != "exit":
             ######### UPDATE ME #########
             # I need a link :D
             from link import *
+            num = input("Select an employee record ID to start with: ")
             addEmp(num)
         except:
             admin_choice = failure()
@@ -41,6 +42,7 @@ while admin_choice != "exit":
             ######### UPDATE ME #########
             # I need a link :D
             from link import * 
+            num = input("Select an employee record ID to update: ")
             updateEmp(num)
         except:
             admin_choice = failure()
@@ -51,6 +53,7 @@ while admin_choice != "exit":
             ######### UPDATE ME #########
             # I need a link :D
             from link import * 
+            num = input("Select an employee record ID to delete: ")
             deleteEmp(num)
         except:
             admin_choice = failure()
