@@ -1,1 +1,1 @@
-DEPARTMENTS = {1: "HR",}
+DEPARTMENTS = {1: "HR", 2: "Finances", 3: "Sales", 4: "Marketing", 5: "Inventory", 6: "IT"}
