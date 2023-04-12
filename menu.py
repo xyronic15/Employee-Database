@@ -1,12 +1,14 @@
 # will allow us to select what operation to perform
 
-import Departments.py
-import constants.py
-import employee.py
-import test.py
+import Departments
+import constants
+import employee
+import test
 
 # must have the option to create, update, and delete employees
 # ---> will pass an employee number to each
+
+from utils import *
 
 menuDict = {1: "Add employees", 2: "Update employees", 3: "Delete employees"}
 
@@ -35,9 +37,7 @@ while admin_choice != "exit":
         try:
             ######### UPDATE ME #########
             # I need a link :D
-            from link import *
-            num = input("Select an employee record ID to start with: ")
-            addEmp(num)
+            addEmp()
         except:
             admin_choice = failure()
 
@@ -46,9 +46,7 @@ while admin_choice != "exit":
         try:
             ######### UPDATE ME #########
             # I need a link :D
-            from link import * 
-            num = input("Select an employee record ID to update: ")
-            updateEmp(num)
+            updateEmp()
         except:
             admin_choice = failure()
 
@@ -57,9 +55,7 @@ while admin_choice != "exit":
         try:
             ######### UPDATE ME #########
             # I need a link :D
-            from link import * 
-            num = input("Select an employee record ID to delete: ")
-            deleteEmp(num)
+            deleteEmp()
         except:
             admin_choice = failure()
 

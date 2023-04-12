@@ -33,5 +33,5 @@ class Department:
         for employee in self.employees:
             print("  -", employee.first_name, employee.last_name)
 
-hr_dept = Department("Human Resources", 1000000, "555-1234")
-tech_dept = Department("Technology", 5000000, "555-5678")
+# hr_dept = Department("Human Resources", 1000000, "555-1234")
+# tech_dept = Department("Technology", 5000000, "555-5678")
