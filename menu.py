@@ -13,6 +13,9 @@ print("exit")
 
 admin_choice = input("Select an operation to perform: ")
 
+while admin_choice != "exit":
+
+    # Add employees
     if admin_choice == '1':
         try:
             # needs a link
@@ -21,6 +24,7 @@ admin_choice = input("Select an operation to perform: ")
         except:
             print("Operation not found.")
 
+    # Update employees
     elif admin_choice == '2':
         try:
             # needs a link
@@ -29,6 +33,7 @@ admin_choice = input("Select an operation to perform: ")
         except:
             print("Operation not found.")
 
+    # Delete employees
     elif admin_choice == '3':
         try:
             # needs a link
@@ -37,5 +42,10 @@ admin_choice = input("Select an operation to perform: ")
         except:
             print("Operation not found.")
 
+    # Exit the program
     elif admin_choice == 'exit':
         break
+
+    # Exit the program
+    else:
+        admin_choice = input("Select an operation to perform: ")
