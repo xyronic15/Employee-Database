@@ -1,5 +1,10 @@
 # will allow us to select what operation to perform
 
+import Departments
+import constants
+import employee
+import test
+
 # must have the option to create, update, and delete employees
 # ---> will pass an employee number to each
 
