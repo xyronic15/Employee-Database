@@ -14,6 +14,12 @@ def menuOptions():
     print(f"3: {menuDict[3]}")
     print("exit")
 
+def failure():
+    print("Operation not found.", end="\n\n")
+    menuOptions()
+    admin_choice = input("Select an operation to perform: ")
+    return admin_choice
+    
 menuOptions()
 admin_choice = input("Select an operation to perform: ")
 
@@ -27,9 +33,7 @@ while admin_choice != "exit":
             from link import *
             addEmp(num)
         except:
-            print("Operation not found.", end="\n\n")
-            menuOptions()
-            admin_choice = input("Select an operation to perform: ")
+            admin_choice = failure()
 
     # Update employees
     elif admin_choice == '2':
@@ -39,9 +43,7 @@ while admin_choice != "exit":
             from link import * 
             updateEmp(num)
         except:
-            print("Operation not found.", end="\n\n")
-            menuOptions()
-            admin_choice = input("Select an operation to perform: ")
+            admin_choice = failure()
 
     # Delete employees
     elif admin_choice == '3':
@@ -51,9 +53,7 @@ while admin_choice != "exit":
             from link import * 
             deleteEmp(num)
         except:
-            print("Operation not found.", end="\n\n")
-            menuOptions()
-            admin_choice = input("Select an operation to perform: ")
+            admin_choice = failure()
 
     # Exit the program
     elif admin_choice == 'exit':
