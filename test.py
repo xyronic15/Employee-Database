@@ -1,11 +1,12 @@
-from employee import Employee, Department
+from employee import employee
+from Departments import Department
 def test_department():
     # Create department
     d = Department("Engineering", 100000, "555-1234")
 
     # Create employees
-    e1 = Employee("John", "Doe", "01/01/2022", 50000, d)
-    e2 = Employee("Jane", "Smith", "02/01/2022", 60000, d)
+    e1 = employee("John", "Doe", "01/01/2022", 50000, d)
+    e2 = employee("Jane", "Smith", "02/01/2022", 60000, d)
 
     # Display department
     d.display_department()
