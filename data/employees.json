@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "first_name": "Xyron",
+    "last_name": "Brual",
+    "emp_date": "02/01/2022",
+    "salary": 50000,
+    "department": "IT"
+  },
+  {
+    "id": 2,
+    "first_name": "Gabe",
+    "last_name": "Fabia",
+    "emp_date": "02/01/2022",
+    "salary": 50000,
+    "department": "IT"
+  },
+  {
+    "id": 3,
+    "first_name": "Joy",
+    "last_name": "Khatter",
+    "emp_date": "02/01/2022",
+    "salary": 50000,
+    "department": "IT"
+  }
+]

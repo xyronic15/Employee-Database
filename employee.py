@@ -1,5 +1,5 @@
-class employee:
-
+class Employee:
+    
     def __init__(self, emp_id, first_name, last_name, emp_date, salary, dept):
         self.emp_id = emp_id, # int, every employee must have a unique id
         self.first_name = first_name, # str

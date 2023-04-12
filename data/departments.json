@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Human Resources",
+    "budget": 1000000,
+    "phone_number": "555-1234"
+  },
+  {
+    "id": 2,
+    "name": "Finances",
+    "budget": 1000000,
+    "phone_number": "555-1234"
+  },
+  {
+    "id": 3,
+    "name": "Sales",
+    "budget": 1000000,
+    "phone_number": "555-1234"
+  },
+  {
+    "id": 4,
+    "name": "Marketing",
+    "budget": 1000000,
+    "phone_number": "555-1234"
+  },
+  {
+    "id": 5,
+    "name": "Inventory",
+    "budget": 1000000,
+    "phone_number": "555-1234"
+  },
+  {
+    "id": 6,
+    "name": "Technology",
+    "budget": 1000000,
+    "phone_number": "555-1234"
+  }
+]

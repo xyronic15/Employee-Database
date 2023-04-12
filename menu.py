@@ -3,6 +3,8 @@
 # must have the option to create, update, and delete employees
 # ---> will pass an employee number to each
 
+from utils import *
+
 menuDict = {1: "Add employees", 2: "Update employees", 3: "Delete employees"}
 
 # Display the print options
@@ -30,8 +32,7 @@ while admin_choice != "exit":
         try:
             ######### UPDATE ME #########
             # I need a link :D
-            from link import *
-            addEmp(num)
+            addEmp()
         except:
             admin_choice = failure()
 
@@ -40,8 +41,7 @@ while admin_choice != "exit":
         try:
             ######### UPDATE ME #########
             # I need a link :D
-            from link import * 
-            updateEmp(num)
+            updateEmp()
         except:
             admin_choice = failure()
 
@@ -50,8 +50,7 @@ while admin_choice != "exit":
         try:
             ######### UPDATE ME #########
             # I need a link :D
-            from link import * 
-            deleteEmp(num)
+            deleteEmp()
         except:
             admin_choice = failure()
 
