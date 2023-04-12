@@ -34,13 +34,45 @@ def read_departments():
     except Exception as e:
         print(e)
 
-def log_employees():
-    """Function that passes through a list of employees and adds them to the employees JSON file"""
-    pass
+def log_employees(employees):
+    """Function that passes through a dict of employees and adds them to the employees JSON file"""
 
-def log_departments():
-    """Function that passes through a list of employees and adds them to the employees JSON file"""
-    pass
+    # make a list of employee dictionaries
+    data = list(map(create_employee_json, employees.items()))
+
+    # turn the data into a json
+    json_data = json.dumps(data, indent=2)
+
+    # try writing file or raise exception
+    try:
+        # open the file
+        with open('data/employees.json', "w") as f:
+            
+            # write the file
+            f.write(json_data)
+
+    except Exception as e:
+        print(e)
+
+def log_departments(departments):
+    """Function that passes through a dict of departments and adds them to the departments JSON file"""
+
+    # make a list of employee dictionaries
+    data = list(map(create_dept_json, departments.items()))
+
+    # turn the data into a json
+    json_data = json.dumps(data, indent=2)
+
+    # try writing file or raise exception
+    try:
+        # open the file
+        with open('data/departments.json', "w") as f:
+            
+            # write the file
+            f.write(json_data)
+
+    except Exception as e:
+        print(e)
 
 
 # list comprehension functions
@@ -55,6 +87,20 @@ def create_employee_obj(data):
 def create_dept_obj(data):
     """Function that reads from the data passed from the JSON and makes an employee object"""
 
-    department = Department(data["name"], data["budget"], data["phone_number"])
+    department = Department(data["id"], data["name"], data["budget"], data["phone_number"], data["employees"])
 
     return data["id"], department
+
+def create_employee_json(data):
+    """Function that takes one entry of employee and makes a dict ready for the json file"""
+
+    employee = {"id": data[0], "first_name": data[1].first_name[0], "last_name": data[1].last_name[0], "emp_date": data[1].emp_date[0], "salary": data[1].salary[0], "department": data[1].dept}
+
+    return employee
+
+def create_dept_json(data):
+    """Function that takes one entry of employee and makes a dict ready for the json file"""
+
+    department = {"id": data[0], "name": data[1].name, "budget": data[1].budget, "phone_number": data[1].phone_number, "employees": data[1].employees}
+
+    return department

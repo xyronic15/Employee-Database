@@ -4,6 +4,7 @@ import Departments
 import constants
 import employee
 import test
+from logger import *
 
 # must have the option to create, update, and delete employees
 # ---> will pass an employee number to each
@@ -26,6 +27,8 @@ def failure():
     menuOptions()
     admin_choice = input("Select an operation to perform: ")
     return admin_choice
+
+emp_dict = read_employees()
     
 menuOptions()
 admin_choice = input("Select an operation to perform: ")
@@ -37,7 +40,7 @@ while admin_choice != "exit":
         try:
             ######### UPDATE ME #########
             # I need a link :D
-            addEmp()
+            addEmp(emp_dict)
         except:
             admin_choice = failure()
 
