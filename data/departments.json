@@ -8,31 +8,37 @@
   {
     "id": 2,
     "name": "Finances",
-    "budget": 1000000,
-    "phone_number": "555-1234"
+    "budget": 8000000,
+    "phone_number": "567-8901"
   },
   {
     "id": 3,
     "name": "Sales",
-    "budget": 1000000,
-    "phone_number": "555-1234"
+    "budget": 9000000,
+    "phone_number": "545-4557"
   },
   {
     "id": 4,
     "name": "Marketing",
-    "budget": 1000000,
-    "phone_number": "555-1234"
+    "budget": 6000000,
+    "phone_number": "553-7564"
   },
   {
     "id": 5,
     "name": "Inventory",
     "budget": 1000000,
-    "phone_number": "555-1234"
+    "phone_number": "559-1234"
   },
   {
     "id": 6,
     "name": "Technology",
-    "budget": 1000000,
-    "phone_number": "555-1234"
+    "budget": 1200000,
+    "phone_number": "550-8899"
+  },
+  {
+    "id": 7,
+    "name": "General Management",
+    "budget": 1500000,
+    "phone_number": "550-8899"
   }
 ]
