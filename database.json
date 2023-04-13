@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "first_name": "Keanu",
+        "last_name": "Reeves",
+        "date": "2023-12-31",
+        "salary": 99000,
+        "department": 4
+    },
+    {
+        "id": 2,
+        "first_name": "Donnie",
+        "last_name": "Yen",
+        "date": "2023-12-01",
+        "salary": 34200,
+        "department": 2
+    }
+]

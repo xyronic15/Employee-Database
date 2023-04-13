@@ -1,6 +1,7 @@
 from employee import *
 from Departments import *
 from exceptions import *
+from update import *
 
 def addEmp(employees, departments):
     num_employees = int(input("Enter the number of employees to add: "))
@@ -36,24 +37,30 @@ def addEmp(employees, departments):
         employees[next_id] = employee
 
 
-def updateEmp(emp_dict):
+def updateEmp():
     # ask for how many emps being updated
+    update_count = int(input("How many employees do you want to update?"))
 
+    for i in range(0, update_count):
+        update_id = int(input("Please input the id of the employee you are updating: "))
+        new_salary = int(input("Please input their new salary: "))
+        new_department = int(input("Please input their new department: "))
+        updateEmployee(update_id, new_salary=new_salary, new_department=new_department)
     # for loop
     # ask for the id
     # access dict and get the employee using the id
     # ask for the new salary and department
-    # employee.update(salary, dept)
+    # employee.update(salary, dept
 
-    pass
-
-def deleteEmp():
-  emp_id =int(input("Enter the Employee ID:"))
-  if int(int(empd_id)) not in emp_dict.keys():
-    print("Entry not found")
-  elif:
-    print("Employee has been deleted successfully")
-
+def deleteEmp(emp_dict, dep_dict):
+    emp_id =int(input("Enter the Employee ID:"))
+    if int(int(emp_id)) not in emp_dict.keys():
+        print("Entry not found")
+    else:
+        dep_id = emp_dict[int(emp_id)].department
+        dep_dict[int(dep_id)].remove_employee(int(emp_id), emp_dict)
+        emp_dict.pop(int(emp_id))
+        print("Employee has been deleted successfully")
 
 def readEmpById(emp_dict, dep_dict):
     """Function that takes a user input for ID and looks for it in the employee dictionary"""
@@ -214,9 +221,6 @@ def removeDepById(dep_dict, emp_dict):
             raise ValueError("Not an integer")
         if int(dep_id) not in dep_dict.keys():
             raise InvalidIDException(f"Department ID {dep_id} not found")
-
-        # # print out the chosen department
-        # dep_dict[int(dep_id)].display_department(emp_dict)
 
         # get the employees of the department and remove them from the department
         emp_ids = dep_dict[int(dep_id)].employees
