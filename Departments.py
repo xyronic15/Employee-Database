@@ -14,7 +14,7 @@ class Department:
         for employee in self.employees:
             if employee == emp_id:
                 self.employees.remove(employee)
-                emp_dict[emp_id].dept = None
+                emp_dict[emp_id].department = None
                 return True
         return False
     
@@ -32,7 +32,7 @@ class Department:
         print("Phone Number:", self.phone_number)
         print("Employees:")
         for employee in self.employees:
-            print("  -", emp_dict[employee].first_name[0], emp_dict[employee].last_name[0])
+            print("  -", emp_dict[employee].first_name, emp_dict[employee].last_name)
         print()
 
 # hr_dept = Department("Human Resources", 1000000, "555-1234")

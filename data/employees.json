@@ -1,26 +1,26 @@
 [
-    {
-        "id": 1,
-        "first_name": "Xyron",
-        "last_name": "Brual",
-        "date": "02/01/2022",
-        "salary": 234,
-        "department": 1
-    },
-    {
-        "id": 2,
-        "first_name": "Gabe",
-        "last_name": "Fabia",
-        "date": "02/01/2022",
-        "salary": 333,
-        "department": 4
-    },
-    {
-        "id": 3,
-        "first_name": "Joy",
-        "last_name": "Khatter",
-        "date": "02/01/2022",
-        "salary": 55000,
-        "department": 3
-    }
+  {
+    "id": 1,
+    "first_name": "Xyron",
+    "last_name": "Brual",
+    "emp_date": "02/01/2022",
+    "salary": 234,
+    "department": 1
+  },
+  {
+    "id": 2,
+    "first_name": "Gabe",
+    "last_name": "Fabia",
+    "emp_date": "02/01/2022",
+    "salary": 333,
+    "department": 4
+  },
+  {
+    "id": 3,
+    "first_name": "Joy",
+    "last_name": "Khatter",
+    "emp_date": "02/01/2022",
+    "salary": 55000,
+    "department": 3
+  }
 ]

@@ -57,7 +57,7 @@ def deleteEmp(emp_dict, dep_dict):
     if int(int(emp_id)) not in emp_dict.keys():
         print("Entry not found")
     else:
-        dep_id = emp_dict[int(emp_id)].dept
+        dep_id = emp_dict[int(emp_id)].department
         dep_dict[int(dep_id)].remove_employee(int(emp_id), emp_dict)
         emp_dict.pop(int(emp_id))
         print("Employee has been deleted successfully")
