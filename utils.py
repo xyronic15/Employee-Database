@@ -1,6 +1,7 @@
 from employee import *
 from Departments import *
 from exceptions import *
+from update import *
 
 def addEmp(employees, departments):
     num_employees = int(input("Enter the number of employees to add: "))
@@ -36,16 +37,20 @@ def addEmp(employees, departments):
         employees[next_id] = employee
 
 
-def updateEmp(emp_dict):
+def updateEmp():
     # ask for how many emps being updated
+    update_count = int(input("How many employees do you want to update?"))
 
+    for i in range(0, update_count):
+        update_id = int(input("Please input the id of the employee you are updating: "))
+        new_salary = int(input("Please input their new salary: "))
+        new_department = int(input("Please input their new department: "))
+        updateEmployee(update_id, new_salary=new_salary, new_department=new_department)
     # for loop
     # ask for the id
     # access dict and get the employee using the id
     # ask for the new salary and department
-    # employee.update(salary, dept)
-
-    pass
+    # employee.update(salary, dept
 
 def deleteEmp(emp_dict, dep_dict):
     emp_id =int(input("Enter the Employee ID:"))
@@ -56,7 +61,6 @@ def deleteEmp(emp_dict, dep_dict):
         dep_dict[int(dep_id)].remove_employee(int(emp_id), emp_dict)
         emp_dict.pop(int(emp_id))
         print("Employee has been deleted successfully")
-
 
 def readEmpById(emp_dict, dep_dict):
     """Function that takes a user input for ID and looks for it in the employee dictionary"""
