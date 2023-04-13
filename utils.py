@@ -194,9 +194,6 @@ def removeDepById(dep_dict, emp_dict):
         if int(dep_id) not in dep_dict.keys():
             raise InvalidIDException(f"Department ID {dep_id} not found")
 
-        # # print out the chosen department
-        # dep_dict[int(dep_id)].display_department(emp_dict)
-
         # get the employees of the department and remove them from the department
         emp_ids = dep_dict[int(dep_id)].employees
         # print(emp_ids)
