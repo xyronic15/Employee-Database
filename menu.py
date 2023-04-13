@@ -43,9 +43,7 @@ while admin_choice != "exit":
     # Add employees
     if admin_choice == '1':
         try:
-            ######### UPDATE ME #########
-            # I need a link :D
-            addEmp(emp_dict)
+            addEmp(emp_dict, dep_dict)
         except:
             admin_choice = failure()
 
