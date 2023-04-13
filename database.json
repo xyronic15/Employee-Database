@@ -4,8 +4,8 @@
         "first_name": "Keanu",
         "last_name": "Reeves",
         "date": "2023-12-31",
-        "salary": 30000,
-        "department": "HR"
+        "salary": 99000,
+        "department": 4
     },
     {
         "id": 2,
@@ -13,6 +13,6 @@
         "last_name": "Yen",
         "date": "2023-12-01",
         "salary": 34200,
-        "department": "HR"
+        "department": 2
     }
 ]

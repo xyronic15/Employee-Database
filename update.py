@@ -2,9 +2,9 @@ from employee import Employee
 import datetime
 import json
 
-def updateEmp(id: int, new_salary:int = None, new_department:int = None):
+def updateEmployee(id: int, new_salary:int = None, new_department:int = None):
 
-    employees = loadEmps("database.json")
+    employees = loadEmps("data/employees.json")
     matched_employee = findEmpByID(id, employees)
 
     # updates to employees
@@ -13,7 +13,7 @@ def updateEmp(id: int, new_salary:int = None, new_department:int = None):
     if new_department != None:
         matched_employee.department = new_department
 
-    writeToFileEmps("database.json", employees)
+    writeToFileEmps("data/employees.json", employees)
 
     
 # loads json from a file and returns a list of employees
@@ -48,3 +48,5 @@ def findEmpByID(id:int, employees:list):
     matched_employee = matched_employees[0]
 
     return matched_employee
+
+updateEmployee(3, 55000, 3)
