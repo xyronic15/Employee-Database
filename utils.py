@@ -2,18 +2,39 @@ from employee import *
 from Departments import *
 from exceptions import *
 
-def addEmp(emp_dict):
-    num_emp = input("Enter number")
+def addEmp(employees, departments):
+    num_employees = int(input("Enter the number of employees to add: "))
+    
+    for i in range(num_employees):
+        # Get next employee ID
+        next_id = list(employees.keys())[-1] + 1
+        print(next_id)
 
-    for i in range(num_emp):
-        # ask for first and last name
-        # ask for all the appropriate info
+        # Get employee information
+        first_name = input("Enter employee first name: ")
+        last_name = input("Enter employee last name: ")
+        date_of_employment = input("Enter employee date of employment (DD/MM/YYYY): ")
+        while True:
+            try:
+                salary = float(input("Enter employee salary: "))
+                break
+            except ValueError:
+                print("Invalid input, please enter a valid number.")
 
-        # make a new employee obj
-        # add it to the dictionary
-        pass
+        # Get department ID
+        print("Department options:")
+        print("List of departments:")
+        for key, dep in departments.items():
+            print(f"ID:{key}, Department name: {dep.name}")
+        print("")
 
-    pass
+        dept_id = int(input("Enter a department's ID: "))
+
+        employee = Employee(next_id, first_name, last_name, date_of_employment, salary, dept_id)
+
+        # Add employee to dictionary
+        employees[next_id] = employee
+
 
 def updateEmp(emp_dict):
     # ask for how many emps being updated
