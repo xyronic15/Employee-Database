@@ -1,16 +1,16 @@
-#Delete Employee
-def deleteemp ():  
-i =int(input("Enter the Employee ID:"))
-if i == emp_id:
-    del employee[emp_id]
+#Delete Employee info from Employee Details
+def deleteEmp ():  
+emp_id =int(input("Enter the Employee ID:"))
+if int(int(empd_id)) not in emp_dict.keys():
+    print("Entry not found")
+elif:
     print("Employee has been deleted successfully")
-else:
-    print ("Entry not found")
-#Delete Department
-def deletedep ():
-i =int(input("Enter the Department ID:"))
-if i == dep_id:
-    del dep[dep_id]
-    print("Employee has been deleted successfully")
-else:
-    print ("Entry not found")
+    
+#Delete Employee info from Department Details
+def remove_employee(self, emp_id):
+        for employee in self.employees:
+            if employee.emp_id == emp_id:
+                self.employees.remove(employee)
+                employee.department = None
+                return True
+        return False
