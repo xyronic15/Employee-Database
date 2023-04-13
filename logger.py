@@ -94,7 +94,7 @@ def create_dept_obj(data):
 def create_employee_json(data):
     """Function that takes one entry of employee and makes a dict ready for the json file"""
 
-    employee = {"id": data[0], "first_name": data[1].first_name, "last_name": data[1].last_name, "emp_date": data[1].date, "salary": data[1].salary, "department": data[1].department}
+    employee = {"id": data[0], "first_name": data[1].first_name, "last_name": data[1].last_name, "date": data[1].date, "salary": data[1].salary, "department": data[1].department}
 
     return employee
 

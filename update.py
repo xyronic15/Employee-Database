@@ -2,18 +2,19 @@ from employee import Employee
 import datetime
 import json
 
-def updateEmployee(id: int, new_salary:int = None, new_department:int = None):
+def updateEmployee(id: int, new_salary:int = None, new_department:int = None, emp_dict:dict = None, dep_dict:dict = None):
 
-    employees = loadEmps("data/employees.json")
-    matched_employee = findEmpByID(id, employees)
+    old_dep = emp_dict[id].department
 
     # updates to employees
     if new_salary != None:
-        matched_employee.salary = new_salary
+        emp_dict[id].salary = new_salary
     if new_department != None:
-        matched_employee.department = new_department
+        dep_dict[old_dep].remove_employee(id, emp_dict)
+        emp_dict[id].department = new_department
+        dep_dict[new_department].add_employee(id)
 
-    writeToFileEmps("data/employees.json", employees)
+    # writeToFileEmps("data/employees.json", employees)
 
     
 # loads json from a file and returns a list of employees

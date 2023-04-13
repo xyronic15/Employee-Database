@@ -9,7 +9,7 @@ def addEmp(employees, departments):
     for i in range(num_employees):
         # Get next employee ID
         next_id = list(employees.keys())[-1] + 1
-        print(next_id)
+        # print(next_id)
 
         # Get employee information
         first_name = input("Enter employee first name: ")
@@ -36,21 +36,29 @@ def addEmp(employees, departments):
         # Add employee to dictionary
         employees[next_id] = employee
 
+        # Add employee to the department
+        departments[dept_id].add_employee(next_id)
 
-def updateEmp():
+
+def updateEmp(emp_dict, dep_dict):
     # ask for how many emps being updated
     update_count = int(input("How many employees do you want to update?"))
 
     for i in range(0, update_count):
         update_id = int(input("Please input the id of the employee you are updating: "))
-        new_salary = int(input("Please input their new salary: "))
-        new_department = int(input("Please input their new department: "))
-        updateEmployee(update_id, new_salary=new_salary, new_department=new_department)
-    # for loop
-    # ask for the id
-    # access dict and get the employee using the id
-    # ask for the new salary and department
-    # employee.update(salary, dept
+        new_salary = input("Please input their new salary if applicable: ")
+        if len(new_salary) == 0 or not new_salary.isnumeric():
+            new_salary = None
+        else:
+            new_salary = int(new_salary)
+        
+        new_department = input("Please input their new department if applicable: ")
+        if len(new_department) == 0 or not new_department.isnumeric():
+            new_department = None
+        else:
+            new_department = int(new_department)
+
+        updateEmployee(update_id, new_salary=new_salary, new_department=new_department, emp_dict=emp_dict, dep_dict=dep_dict)
 
 def deleteEmp(emp_dict, dep_dict):
     emp_id =int(input("Enter the Employee ID:"))

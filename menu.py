@@ -15,7 +15,7 @@ emp_dict = read_employees()
 dep_dict = read_departments()
 # print(emp_dict)
 
-menuDict = {1: "Add employees", 2: "Update employees", 3: "Delete employees", 4: "Read employee by ID", 5: "Read all employees", 6: "Create a department", 7: "Update a department", 8: "Read a Department by ID", 9: "Remove a department"}
+menuDict = {1: "Add employees", 2: "Update employees", 3: "Delete employees", 4: "Read employee by ID", 5: "List all employees", 6: "Create a department", 7: "Update a department", 8: "Read a Department by ID", 9: "Delete a department"}
 
 # Display the print options
 def menuOptions(): 
@@ -53,7 +53,7 @@ while admin_choice != "exit":
         try:
             ######### UPDATE ME #########
             # I need a link :D
-            updateEmp()
+            updateEmp(emp_dict, dep_dict)
         except:
             admin_choice = failure()
 
