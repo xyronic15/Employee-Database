@@ -19,3 +19,10 @@ class Employee:
     def __update__():
         # asks for id num, and which info they want to update
         pass
+
+    def display_employee(self, dep_dict):
+        """Function displays the employee's full name, emp_date, salary and department"""
+        print(f"Full name: {self.first_name[0]} {self.last_name[0]}")
+        print(f"Date of Employment: {self.emp_date[0]}")
+        print(f"Current salary: {self.salary[0]}")
+        print(f"Department: {dep_dict[self.dept].name}")

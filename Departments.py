@@ -10,11 +10,11 @@ class Department:
         self.employees.append(employee.emp_id)
         employee.department = self.id
     
-    def remove_employee(self, emp_id):
+    def remove_employee(self, emp_id, emp_dict):
         for employee in self.employees:
-            if employee.emp_id == emp_id:
+            if employee == emp_id:
                 self.employees.remove(employee)
-                employee.department = None
+                emp_dict[emp_id].dept = None
                 return True
         return False
     
@@ -26,13 +26,14 @@ class Department:
         if phone_number is not None:
             self.phone_number = phone_number
     
-    def display_department(self):
+    def display_department(self, emp_dict):
         print("Department:", self.name)
         print("Budget:", self.budget)
         print("Phone Number:", self.phone_number)
         print("Employees:")
         for employee in self.employees:
-            print("  -", employee.first_name, employee.last_name)
+            print("  -", emp_dict[employee].first_name[0], emp_dict[employee].last_name[0])
+        print()
 
 # hr_dept = Department("Human Resources", 1000000, "555-1234")
 # tech_dept = Department("Technology", 5000000, "555-5678")
