@@ -27,7 +27,12 @@ def updateEmp(emp_dict):
     pass
 
 def deleteEmp():
-    pass
+  emp_id =int(input("Enter the Employee ID:"))
+  if int(int(empd_id)) not in emp_dict.keys():
+    print("Entry not found")
+  elif:
+    print("Employee has been deleted successfully")
+
 
 def readEmpById(emp_dict, dep_dict):
     """Function that takes a user input for ID and looks for it in the employee dictionary"""
