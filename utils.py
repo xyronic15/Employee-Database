@@ -26,12 +26,15 @@ def updateEmp(emp_dict):
 
     pass
 
-def deleteEmp():
-  emp_id =int(input("Enter the Employee ID:"))
-  if int(int(empd_id)) not in emp_dict.keys():
-    print("Entry not found")
-  elif:
-    print("Employee has been deleted successfully")
+def deleteEmp(emp_dict, dep_dict):
+    emp_id =int(input("Enter the Employee ID:"))
+    if int(int(emp_id)) not in emp_dict.keys():
+        print("Entry not found")
+    else:
+        dep_id = emp_dict[int(emp_id)].dept
+        dep_dict[int(dep_id)].remove_employee(int(emp_id), emp_dict)
+        emp_dict.pop(int(emp_id))
+        print("Employee has been deleted successfully")
 
 
 def readEmpById(emp_dict, dep_dict):

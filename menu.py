@@ -61,9 +61,7 @@ while admin_choice != "exit":
     # Delete employees
     elif admin_choice == '3':
         try:
-            ######### UPDATE ME #########
-            # I need a link :D
-            deleteEmp()
+            deleteEmp(emp_dict, dep_dict)
         except:
             admin_choice = failure()
     
