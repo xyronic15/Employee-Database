@@ -6,9 +6,8 @@ class Department:
         self.phone_number = phone_number
         self.employees = employees
     
-    def add_employee(self, employee):
-        self.employees.append(employee.emp_id)
-        employee.department = self.id
+    def add_employee(self, emp_id):
+        self.employees.append(emp_id)
     
     def remove_employee(self, emp_id, emp_dict):
         for employee in self.employees:
