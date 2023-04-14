@@ -1,9 +1,4 @@
 # will allow us to select what operation to perform
-
-# import Departments
-# import constants
-# import employee
-# import test
 from logger import *
 from utils import *
 
@@ -13,7 +8,6 @@ from utils import *
 # get the employees and department dicts from the json first
 emp_dict = read_employees()
 dep_dict = read_departments()
-# print(emp_dict)
 
 menuDict = {1: "Add employees", 2: "Update employees", 3: "Delete employees", 4: "Read employee by ID", 5: "List all employees", 6: "Create a department", 7: "Update a department", 8: "Read a Department by ID", 9: "Delete a department"}
 
@@ -51,18 +45,16 @@ while admin_choice != "exit":
     # Update employees
     elif admin_choice == '2':
         try:
-            ######### UPDATE ME #########
-            # I need a link :D
             updateEmp(emp_dict, dep_dict)
         except:
             admin_choice = failure()
 
     # Delete employees
     elif admin_choice == '3':
-        # try:
-        deleteEmp(emp_dict, dep_dict)
-        # except:
-        #     admin_choice = failure()
+        try:
+            deleteEmp(emp_dict, dep_dict)
+        except:
+            admin_choice = failure()
     
     # Read employee by id
     elif admin_choice == "4":
@@ -73,10 +65,10 @@ while admin_choice != "exit":
     
     #  Read all employees
     elif admin_choice == "5":
-        # try:
-        readAllEmp(emp_dict, dep_dict)
-        # except:
-        #     admin_choice = failure()
+        try:
+            readAllEmp(emp_dict, dep_dict)
+        except:
+            admin_choice = failure()
     
     #  Create a department
     elif admin_choice == "6":
