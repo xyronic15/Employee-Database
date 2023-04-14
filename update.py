@@ -13,9 +13,6 @@ def updateEmployee(id: int, new_salary:int = None, new_department:int = None, em
         dep_dict[old_dep].remove_employee(id, emp_dict)
         emp_dict[id].department = new_department
         dep_dict[new_department].add_employee(id)
-
-    # writeToFileEmps("data/employees.json", employees)
-
     
 # loads json from a file and returns a list of employees
 def loadEmps(file_name:str):

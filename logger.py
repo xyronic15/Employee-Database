@@ -77,13 +77,6 @@ def log_departments(departments):
 
 # list comprehension functions
 
-# def create_employee_obj(data):
-#     """Function that reads from the data passed from the JSON and makes an employee object"""
-
-#     employee = Employee(data["id"], data["first_name"], data["last_name"], data["emp_date"], data["salary"], data["department"])
-
-#     return data["id"], employee
-
 def create_dept_obj(data):
     """Function that reads from the data passed from the JSON and makes an employee object"""
 
