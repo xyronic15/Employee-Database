@@ -27,12 +27,8 @@ def addEmp(employees, departments):
         print("List of departments:")
         for key, dep in departments.items():
             print(f"ID:{key}, Department name: {dep.name}")
-        print(departments)
-        
-        
-        
-        while True:
 
+        while True:
             dept_id = int(input("Enter a department's ID: "))
             try:
                 departments[dept_id]
@@ -40,8 +36,6 @@ def addEmp(employees, departments):
             except:
                 print("That department id is invalid")
                 
-        
-
         employee = Employee(next_id, first_name, last_name, date_of_employment, salary, dept_id)
 
         # Add employee to dictionary
