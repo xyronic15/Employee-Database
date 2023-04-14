@@ -32,7 +32,7 @@ def addEmp(employees, departments):
         
         
         while True:
-            
+
             dept_id = int(input("Enter a department's ID: "))
             try:
                 departments[dept_id]
@@ -63,7 +63,7 @@ def updateEmp(emp_dict, dep_dict):
         else:
             new_salary = int(new_salary)
         
-        new_department = input("Please input their new department if applicable: ")
+        new_department = input("Please input their new department id if applicable: ")
         if len(new_department) == 0 or not new_department.isnumeric():
             new_department = None
         else:
