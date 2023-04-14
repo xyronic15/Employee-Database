@@ -33,6 +33,3 @@ class Department:
         for employee in self.employees:
             print("  -", emp_dict[employee].first_name, emp_dict[employee].last_name)
         print()
-
-# hr_dept = Department("Human Resources", 1000000, "555-1234")
-# tech_dept = Department("Technology", 5000000, "555-5678")
